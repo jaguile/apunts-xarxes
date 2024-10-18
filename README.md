@@ -1,2 +1,1 @@
-# apunts-xarxes
-Apunts de xarxes
+# Apunts de Xarxes
