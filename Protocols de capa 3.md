@@ -66,8 +66,8 @@ especifica l’adreça ip de la màquina que ha generat el paquet.
 #### Adreça de destinació (destination address) (32 bits)
 especifica l’adreça ip de la màquina a la qual es volen enviar les dades.
 
-#### Opcions (options and padding) (longitud variable)
-Permet que Ip suporti varies opcions, com la seguretat
+#### Opcions (longitud variable)
+Permet que Ip suporti varies opcions, com pot ser opcions de seguretat
 
 #### Farciment (longitud variable)
 Afegeix zeros perquè l’encapçalament sigui múltiple de 32 bits.
