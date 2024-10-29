@@ -11,24 +11,27 @@ Els camps de la capçalera ipv4 van en blocs (o registres) de 32 bits i el míni
 ![](https://hackmd.io/_uploads/HJi6YRVzp.png)
 
 #### version
-sempre és 4, que és la versió ip. **Té un tamany de 4 bits.**. Aquest camp es manté a ipv6.
+sempre és 4, que és la versió ip. **Té un tamany de 4 bits**. Aquest camp es manté a ipv6.
 
 #### IHL (Internet header length)
-Com que la capçalera ipv4 pot variar en tamany, la mateixa té un camp que indica quin tamany que té en quant a blocs o paraules de 32 bits. És el camp IHL (Internet Header Length). **Té un tamany de 4 bits.** Desapareix a ipv6.
+Com que la capçalera ipv4 pot variar en tamany, la mateixa té un camp que indica quin tamany té en quant a blocs o paraules de 32 bits. És el camp IHL (Internet Header Length). **Té un tamany de 4 bits**, per lo que el tamany màxim és 15 blocs. Desapareix a ipv6.
 
-#### Type of service
-Permet indicar el tipus de servei que es vol des del dispositiu que emet el paquet i, per tant, quina prioritat/retard/rendiment/confiabilitat ha de tenir. 
+#### Type of service / Differentiated Services (DS Field)
+Tant el *ToS* com el *DS* ocupen els mateixos 8 bits a la capçalera IPv4. El *ToS* ha quedadt obsolet en detriment del *DS*.
 
-El camp conté (d’esquerra a dreta) un camp de preferència (3-bit); tres indicadors, D[elay bit], T[hroughput bit] i R[eliability bit]; i 2 bits no utilitzats. El camp de precedència és una prioritat, de 0 (normal) a 7 (paquet de control de la xarxa). Els tres bits indicadors permeten al host especificar el que li interessa més del grup {retardo, rendimiento, confiabilidad}. **Té un tamany de 8 bits.**. Es renombra com a *Traffic class* a ipv6.
+El *DS* es divideix en dues parts:
 
-Si un dels tres bit que hi han entre el 4 i el sisè té per valor 1:
+    1. **Differentiated Services Code Point (DSCP)**: Els primers 6 bits del camp DS.
 
-* **Delay bit**. Interessa que el paquet tingui el mínim retràs.
-* **Throughput bit**. Interessa que sempre que es pugui se li doni més ample de banda.
-* **Reliability bit**. Interessa la confiabilitat, que arribi bé el paquet, abans que la rapidesa.
+    S'utilitzen per definir la classe de servei (Class of Service, CoS) i prioritzar els paquets segons els requisits de qualitat de servei (QoS) de la xarxa.
+
+    2. **Explicit Congestion Notification (ECN)**: Els últims 2 bits del camp DS.
+
+    Aquests bits indiquen informació sobre la congestió de la xarxa.
+    Quan s'utilitzen, permeten als encaminadors i dispositius de xarxa notificar als dispositius finals sobre la congestió, perquè aquests ajustin la velocitat d'enviament de paquets i ajudin a reduir la congestió.
 
 #### Total Length
-Tamany total del datagrama ip (capçalera i dades). **Té un tamany de 16 bits.** A ipv6 es renombra a *payload length*, tot i que a ipv6 es refereix únicament al tamany de les dades, no inclou la capçalera ipv6.
+Tamany total del datagrama ip (capçalera i dades). **Té un tamany de 16 bits.** A ipv6 es renombra com a *payload length*, tot i que a ipv6 es refereix únicament al tamany de les dades, no inclou la capçalera ipv6.
 
 #### Identification
 És l’identificador del datagrama al qual pertany aquest datagrama (un datagrama pot fragmentar-se en més datagrames en el seu viatge per les xarxes). **Té un tamany de 16 bits.** Desapareix a ipv6.
@@ -37,14 +40,22 @@ Tamany total del datagrama ip (capçalera i dades). **Té un tamany de 16 bits.*
 **Són tres bits** que indiquen opcions sobre la fragmentació del datagrama. El primer bit no es fa servir; el segon bit a 1 indica que el datagrama no es pot fragmentar; el tercer bit indica si el paquet és l’últim fragment d’una sèrie de paquets fragmentats. Desapareix a ipv6.
 
 #### Fragmentation offset
-Cada xarxa d'àrea local té un MTU (Maximum Transmission Units), que indica la mida màxima que pot tenir un paquet que passa per aquell xarxa. Per tant, si el datagrama en qüestió supera aquest MTU, s’ha de fragmentar. El camp Fragmentation offset indica en quina posició del datagrama original estava l’inici de les dades del datagrama actual. **Té un tamany de 16 bits.** Desapareix a ipv6.
+Cada xarxa d'àrea local té un MTU (Maximum Transmission Units), que indica la mida màxima que pot tenir un paquet que passa per aquella xarxa. Per tant, si el datagrama en qüestió supera aquest MTU, s’ha de fragmentar. El camp Fragmentation offset indica en quina posició del datagrama original estava l’inici de les dades del datagrama actual. **Té un tamany de 16 bits.** Desapareix a ipv6.
 
 #### Time to live
 https://packetpushers.net/ip-time-to-live-and-hop-limit-basics/ 
-Indica el nombre màxim de salts que pot efectuar un datagrama a nivell de capa d’internet. O sigui, el nombre màxim de routers pels quals ha de passar. Cada vegada que el datagrama passa per un router, aquest valor disminueix en 1. Si arriba un datagrama a un router amb un TTL a 1 o a 0, aquest és descartat i destruit. A ipv6 es renombra a *Hop Limit length*.
+Indica el nombre màxim de salts que pot efectuar un datagrama a nivell de capa d’internet. O sigui, el nombre màxim de routers pels quals ha de passar. Cada vegada que el datagrama passa per un router, aquest valor disminueix en 1. Si arriba un datagrama a un router amb un TTL a 1, aquest és descartat i destruit. A ipv6 es renombra a *Hop Limit length*.
 
 #### Protocol 
-8 bits. indica quin protocol de capa superior ha generat el paquet.
+8 bits. indica quin protocol de capa superior ha generat el paquet. Pren valors de l'1 al 255 (0 està reservat. Experiments o per depurar errors a la xarxa). Alguns valors:
+
+| Valor | Protocol | Descripció |
+|-------|----------|------------|
+| 1	    |ICMP (Internet Control Message Protocol)	| Utilitzat per missatges de control i error en la xarxa.
+| 6	    |TCP (Transmission Control Protocol)	| Protocol orientat a la connexió per a la transmissió de dades fiables.
+| 17	|UDP (User Datagram Protocol)	| Protocol sense connexió, utilitzat per transmissions ràpides o en temps real.
+| 41	|IPv6 encapsulat en IPv4	| Utilitzat per transmetre paquets IPv6 dins de paquets IPv4.
+| 89	|OSPF (Open Shortest Path First)	| Protocol de routing dinàmic.
 
 #### Suma de verificació d’encapçalament (header checksum)
 16 bits de control perquè no hi hagi errors a l’encapçalament per a ajudar a garantir la seva integritat.
