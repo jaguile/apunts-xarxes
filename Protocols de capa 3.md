@@ -93,12 +93,12 @@ sempre és 6, que és la versió ip.
 > An 8-bit field similar to the type of service (ToS) field in IPv4. It tags the packet with a traffic class that it uses in differentiated services (DiffServ). These functionalities are the same for IPv6 and IPv4.
 
 #### Flow Label
-Nou camp a *ipv6*. Per etiquetar paquets:
+Nou camp a *ipv6*. Per identificar paquets que són d'un mateix flux de dades.
 
 > A completely new 20-bit field. It tags a flow for the IP packets. It can be used for multilayer switching techniques and faster packet-switching performance.
 
 #### Payload Length
-> Similar to the Total Length field of IPv4.
+> Similar to the Total Length field of IPv4. Tot i que a IPv6 fa referència a la longitud de les dades (*payload*).
 
 #### Next Header
 > The value of this field determines the type of information that follows the basic IPv6 header. It can be a transport-layer packet, such as TCP or UDP, or it can be an extension header. The next header field is similar to the Protocol field of IPv4.
@@ -152,7 +152,7 @@ Una ipv6 té dues parts:
 #### Unicast. Autoconfiguració
 Encara que existeix DHCPv6, no és necessari. És suficient amb que l'encaminador de la xarxa anuncïi el seu prefix (64-bit).
 
-El sufix de xarxa es genera a partir de la MAC, com hem vist abans, però el 7è i el 8è bit canvien als següents valors:
+El sufix de xarxa es genera a partir de la MAC, com hem vist abans, però el 7è i el 8è bit (de la MAC) canvien als següents valors:
 
 **Universal/Local (U/L):** el bit situado junto al bit de orden inferior en el primer byte se utiliza para indicar si la dirección se administra universal o localmente. 
 * Si el bit U/L té el valor 0, vol dir que és una adreça Local Scope.
