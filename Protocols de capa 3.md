@@ -21,11 +21,11 @@ Tant el *ToS* com el *DS* ocupen els mateixos 8 bits a la capçalera IPv4. El *T
 
 El *DS* es divideix en dues parts:
 
-    1. **Differentiated Services Code Point (DSCP)**: Els primers 6 bits del camp DS.
+1. **Differentiated Services Code Point (DSCP)**: Els primers 6 bits del camp DS.
 
     S'utilitzen per definir la classe de servei (Class of Service, CoS) i prioritzar els paquets segons els requisits de qualitat de servei (QoS) de la xarxa.
 
-    2. **Explicit Congestion Notification (ECN)**: Els últims 2 bits del camp DS.
+2. **Explicit Congestion Notification (ECN)**: Els últims 2 bits del camp DS.
 
     Aquests bits indiquen informació sobre la congestió de la xarxa.
     Quan s'utilitzen, permeten als encaminadors i dispositius de xarxa notificar als dispositius finals sobre la congestió, perquè aquests ajustin la velocitat d'enviament de paquets i ajudin a reduir la congestió.
