@@ -113,12 +113,14 @@ Una xarxa convidada és una xarxa Wi-Fi separada i aïllada de la xarxa principa
 
 ## Seguretat
 [Auditoria wifi amb hashcat i Kali Linux](https://youtu.be/paS0w6wQP_g?si=NYSnnvrSQErIo78z)
+
 [Sistemes de seguretat wifi. Deiferències entre les diferents versions de WPA](https://latam.kaspersky.com/resource-center/definitions/wep-vs-wpa)
 
 WPAx, Protocol EAPOL
 
 ### Atac de desautenticació
 [How to crack wpa2 wifi password with Aircrack-ng](https://youtu.be/4rnrfbb1-Wg?si=O6rIr9yY4JBVEFSB)
+
 [Manual d'aircrack-ng](https://www.aircrack-ng.org/doku.php?id=cracking_wpa)
 
 1. Amb la nostra targeta wifi (iwconfig), escanegem les wifi que tenim en la nostra proximitat; 
