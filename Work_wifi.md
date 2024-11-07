@@ -1,7 +1,8 @@
 # Work. Apunts Wifi
 ## Captures wireshark
-[Wap Protocol Family] (https://wiki.wireshark.org/SampleCaptures#wap-protocol-family)
-[Wifi - Wireless LAN captures - 802.11] (https://wiki.wireshark.org/SampleCaptures#wifi--wireless-lan-captures--80211)
+[Wap Protocol Family](https://wiki.wireshark.org/SampleCaptures#wap-protocol-family)
+
+[Wifi - Wireless LAN captures - 802.11](https://wiki.wireshark.org/SampleCaptures#wifi--wireless-lan-captures--80211)
 
 ## Wifi - conceptes generals
 
@@ -32,7 +33,7 @@ La tecnologia wifi és una tecnologia per a la connexió de dispositius sense fi
 [Wikipedia. Canals wifi](https://en.wikipedia.org/wiki/List_of_WLAN_channels)
 
 ### Estudi de cobertura
-[Estudi de cobertura wifi - pàg 49] (https://openaccess.uoc.edu/bitstream/10609/118426/7/inavidadTFM0620memoria.pdf)
+[Estudi de cobertura wifi - pàg 49](https://openaccess.uoc.edu/bitstream/10609/118426/7/inavidadTFM0620memoria.pdf)
 
 Bàsicament, la cobertura wifi és l'àrea on arriba la senyal d'una xarxa wifi. Quins factors determinen la cobertura? Alguns poden ser la banda de freqüència en la que actua, el canal, els obstacles físics, i l'atenuació o la força de la senyal.
 
@@ -48,7 +49,7 @@ Bàsicament, la cobertura wifi és l'àrea on arriba la senyal d'una xarxa wifi.
 NetSpot, Ekahau HeatMapper, Wifi Analyzer (Android), Acrylic Wi-fi Home
 
 ## Estandars wifi
-[Relació amb estandars 802.11] (https://www.wi-fi.org/certification/programs)
+[Relació amb estandars 802.11](https://www.wi-fi.org/certification/programs)
 
 1. 802.11a (1999)
 2. 802.11b (1999) - 11 Mbps
@@ -111,14 +112,14 @@ Un hotspot és una ubicació física on es proporciona accés a Internet de mane
 Una xarxa convidada és una xarxa Wi-Fi separada i aïllada de la xarxa principal, creada perquè els visitants o usuaris externs es connectin a Internet sense accedir a recursos privats o sensibles de la xarxa principal. Així, és una mesura de seguretat per evitar que els dispositius dels convidats comprometin la xarxa interna.
 
 ## Seguretat
-[Auditoria wifi amb hashcat i Kali Linux] (https://youtu.be/paS0w6wQP_g?si=NYSnnvrSQErIo78z)
-[Sistemes de seguretat wifi. Deiferències entre les diferents versions de WPA] (https://latam.kaspersky.com/resource-center/definitions/wep-vs-wpa)
+[Auditoria wifi amb hashcat i Kali Linux](https://youtu.be/paS0w6wQP_g?si=NYSnnvrSQErIo78z)
+[Sistemes de seguretat wifi. Deiferències entre les diferents versions de WPA](https://latam.kaspersky.com/resource-center/definitions/wep-vs-wpa)
 
 WPAx, Protocol EAPOL
 
 ### Atac de desautenticació
-[How to crack wpa2 wifi password with Aircrack-ng] (https://youtu.be/4rnrfbb1-Wg?si=O6rIr9yY4JBVEFSB)
-[Manual d'aircrack-ng] (https://www.aircrack-ng.org/doku.php?id=cracking_wpa)
+[How to crack wpa2 wifi password with Aircrack-ng](https://youtu.be/4rnrfbb1-Wg?si=O6rIr9yY4JBVEFSB)
+[Manual d'aircrack-ng](https://www.aircrack-ng.org/doku.php?id=cracking_wpa)
 
 1. Amb la nostra targeta wifi (iwconfig), escanegem les wifi que tenim en la nostra proximitat; 
 2. Escollim la wifi i executem (airmon-ng, crec) per trobar equips connectats a la wifi; 
