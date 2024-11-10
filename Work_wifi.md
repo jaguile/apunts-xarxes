@@ -267,6 +267,7 @@ En el 4-Way Handshake sobretot s'intercanvien dos nombres aleatoris que es fan s
 
     **PTK = PRF (PMK + Anonce + SNonce + Mac (AA)+ Mac (SA))**
 
+    MSK - *Master Session Key*
     PRF - *Pseudo Random Function*
     PMK - *Pairwise (per parelles) Master Key*. Común a tots els dispositius. Deriva del MSK (*Master Session Key*), que a la seva vegada deriva del *Passphrase* i del *SSID*.
     ANonce - Nombre aleatori que genera el punt d'accés (Authenticator)
