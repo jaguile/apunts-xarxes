@@ -265,7 +265,7 @@ En aquest gràfic veiem com es generen les claus que es fan servir per xifrar pa
 
 En el 4-Way Handshake sobretot s'intercanvien dos nombres aleatoris que es fan servir pel càlcul de PTK (*Paiwise Transient Key*) i per l'intercanvi del GTK (*Group Temporary Key*. Comú a tots els dispositius i fet servir pel tràfic *broadcast*):
 
-    **PTK = PRF (PMK + Anonce + SNonce + Mac (AA)+ Mac (SA))**
+**PTK = PRF (PMK + Anonce + SNonce + Mac (AA)+ Mac (SA))**
 
     MSK - *Master Session Key*
     PRF - *Pseudo Random Function*
@@ -293,7 +293,7 @@ Tot això es fa amb missatges de tipus EAPOL (EAP Over LAN), que és el protocol
 
 [4-Way Handshake a WPA3](https://www.wirelessnewbies.com/post/wpa3-simultaneous-authentication-of-equals-sae)
 
-![4-Way Handshake a WPA3](4-WAY-handshake.png)
+![4-Way Handshake a WPA3](4-way-wpa3.webp)
 
 En WPA3 es fa un intercanvi de claus públiques que es generen a partir del passphrase i de la MAC de cada dispositiu. Després de l'intercanvi de claus, s'intercanvien la clau que es farà servir en el xifrat de les dades.
 
