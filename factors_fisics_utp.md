@@ -57,7 +57,7 @@ En aquest exemple, el pin 6 (verd, del parell 3) s’ha invertit en els dos extr
 | **PSELFEXT** (Power Sum Equal-Level Far-End Crosstalk) | Mesura el FEXT tenint en compte totes les interferències dels altres parells.    | dB               | **Alt** (major és millor) |
 | **Atenuació**         | Reducció del senyal a mesura que viatja pel cable.                                                       | dB               | **Baix** (menor és millor) |
 | **Longitud**         | Mesura de la longitud total del cable per assegurar que no supera el màxim permès.                        | metres (m)       | **Segons les normes** (menor que 100 m) |
-| **Retard de propafació** | Retard total en el temps que triga el senyal a arribar d'un extrem a l'altre.                            | nanosegons (ns) | **Baix** (menor és millor) |
+| **Retard de propagació** | Retard total en el temps que triga el senyal a arribar d'un extrem a l'altre.                            | nanosegons (ns) | **Baix** (menor és millor) |
 | **Delay Skew**       | Diferència de retard entre el parell que més retard de propagació té i el que menys (afecta la sincronització de la transmissió de dades)             | nanosegons (ns) | **Baix** (menor és millor) |
 | **PSACR-N** (Power Sum ACR-N) | Relació entre l'atenuació i la suma del NEXT de tots els parells al mateix extrem.               | dB               | **Alt** (major és millor) |
 | **PSACR-F** (Power Sum ACR-F) | Relació entre l'atenuació i la suma del FEXT de tots els parells a l'extrem oposat.             | dB               | **Alt** (major és millor) |
