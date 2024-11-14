@@ -60,6 +60,18 @@ NetSpot, Ekahau HeatMapper, Wifi Analyzer (Android), Acrylic Wi-fi Home
 
 ![Capçaleres wifi vs Ethernet](wifi_ethernet_headers.png)
 
+En el Wireshark, aquestes 4 adreces ens les desglosa en les següents adreces:
+
+![Adreces mac capçalera 802.11](wireshark_macs_802_11.png)
+
+- *Receiver address*: És el node que rep el paquet en el següent salt. 
+- *Transmitter address*: És l'últim node que ha reenviat el paquet.
+- *Destination address*: El node destinatari final.
+- *Souce address*: El node emisor inicial.
+- *BSS ID*: L'identificador de la xarxa. 
+- *STA address*: Serveix per marcar l'adreça MAC del client (estació) d'entre les MAC anteriors.
+
+
 ## Tecnologies emergents: MU-MIMO, Beamforming
 
 ### MU-MIMO
@@ -302,14 +314,7 @@ En WPA3 es fa un intercanvi de claus públiques que es generen a partir del pass
 * Wireshark
 * NetSpot
 
-## Annex. Possibles pràctiques
-
-1. Analitzar captures wifi amb wireshark
-2. Analitzar captures wifi amb aircrack-ng
-3. Estudi de la senyal wifi que ens pugui arribar generant un mapa de calor o alguna eina similar.
-4. Estudi cobertura wifi amb packet tracer: Podem escalar el mapa físic d'una xarxa i estudiar la cobertura.
-
-## Annex. Captures wireshark
+## Annex. Exemple de captures wifi amb Wireshark
 
 [Wap Protocol Family](https://wiki.wireshark.org/SampleCaptures#wap-protocol-family)
 
