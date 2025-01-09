@@ -1,9 +1,3 @@
----
-title: SNMP
-tags: [xarxes]
-
----
-
 ###### tags: `xarxes` 
 
 # SNMP
