@@ -30,7 +30,8 @@ Es fa servir el port UDP 162 per aquest enviament d'informació.
 | *get-next-request*     | recupera el següent valor dintre d'una taula. Aquí l'administrador no necessita conèixer el nom de la variable.     | 
 | *get-bulk-request*     | recupera blocs de dades. Ens estalviem de fer diverses peticions *get*     | 
 | *get-response*     | respon a una sol·licitud *get-request*, *get-next-request* o *get-bulk-request*     | 
-| *set-request*     | enmagatzema el valor d'una variable específica i s'envia el nou valor a l'administrador     | 
+| *set-request*     | Administrador envia petició per canviar variable a base de dades de l'agent.   |
+| *set-response*    | Agent respon indicant l'èxit o no de l'operació.  |
 
 ## Traps
 Els traps són missatges que envien els agents a l'administrador sense missatge *get* previ, automatitzats en base a una configuració prèvia des de l'administrador i que s'activen quan es compleix un event o una condició a la xarxa. Exemples:
